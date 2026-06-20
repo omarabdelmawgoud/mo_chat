@@ -1,17 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:mo_chat/widgets/chat_card.dart';
+import 'package:mo_chat/widgets/custom_search_box.dart';
 
 class ChatsList extends StatelessWidget {
   const ChatsList({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-      itemBuilder: (context, index) {
-        return const ChatCard();
-      },
-      separatorBuilder: (context, index) => const SizedBox(height: 20),
-      itemCount: 20,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Column(
+        children: [
+          Text(
+            "MoroChat",
+            textAlign: TextAlign.left,
+            style: const TextStyle(fontSize: 32, fontWeight: FontWeight.w900),
+          ),
+          const SizedBox(height: 35),
+          const CustomSearchBox(),
+          const SizedBox(height: 35),
+          Expanded(child: ChatsList()),
+        ],
+      ),
     );
   }
 }

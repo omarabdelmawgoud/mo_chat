@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mo_chat/widgets/chats_screen.dart';
+import 'package:mo_chat/widgets/chats_list.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
-        body: const ChatsListScreen(),
+        body: const ChatsList(),
       ),
     );
   }
