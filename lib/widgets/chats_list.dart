@@ -8,9 +8,9 @@ class ChatsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
       itemBuilder: (context, index) {
-        return ChatCard();
+        return const ChatCard();
       },
-      separatorBuilder: (context, index) => SizedBox(height: 20),
+      separatorBuilder: (context, index) => const SizedBox(height: 20),
       itemCount: 20,
     );
   }

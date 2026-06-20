@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:mo_chat/widgets/chats_list.dart';
 import 'package:mo_chat/widgets/custom_search_box.dart';
 
-class HomeScreenbody extends StatelessWidget {
-  const HomeScreenbody({super.key});
+
+class ChatsListScreen extends StatelessWidget {
+  const ChatsListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Padding(
+    return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
@@ -23,12 +22,10 @@ class HomeScreenbody extends StatelessWidget {
               ),
               const SizedBox(height: 35),
               const CustomSearchBox(),
-              SizedBox(height: 35),
-              ChatsList(),
+              const SizedBox(height: 35),
+              Expanded(child: ChatsList()),
             ],
           ),
-        ),
-      ),
-    );
+        );
   }
 }
