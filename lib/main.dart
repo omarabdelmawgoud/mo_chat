@@ -3,11 +3,11 @@ import 'package:mo_chat/constants.dart';
 import 'package:mo_chat/screens/home_screen.dart';
 
 void main() {
-  runApp(const MoroChat());
+  runApp(const MoChat());
 }
 
-class MoroChat extends StatelessWidget {
-  const MoroChat({super.key});
+class MoChat extends StatelessWidget {
+  const MoChat({super.key});
 
   @override
   Widget build(BuildContext context) {
