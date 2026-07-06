@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "171901351805",
+    "project_id": "mochat-7a122",
+    "storage_bucket": "mochat-7a122.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171901351805:android:bf9b1c01e829c67fb87e14",
+        "android_client_info": {
+          "package_name": "com.example.mo_chat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXEaJMPkuWrredhgF3RJVsE--r8CLWtSQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
