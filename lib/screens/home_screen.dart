@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mo_chat/screens/calls_screen.dart';
+import 'package:mo_chat/screens/settings_screen.dart';
 import 'package:mo_chat/widgets/chats_list.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -9,17 +11,17 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int currntIndex = 0;
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         bottomNavigationBar: BottomNavigationBar(
-          currentIndex: currntIndex,
+          currentIndex: currentIndex,
           onTap: (value) {
             setState(() {
-              currntIndex = value;
+              currentIndex = value;
             });
           },
           items: const [
@@ -31,7 +33,33 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
-        body: const ChatsList(),
+        body: Column(
+          children: [
+            const SizedBox(height: 16),
+            Text(
+              "MoroChat",
+              textAlign: TextAlign.left,
+              style: const TextStyle(fontSize: 32, fontWeight: FontWeight.w900),
+            ),
+            const SizedBox(height: 35),
+            Expanded(
+              child: Builder(
+                builder: (_) {
+                  switch (currentIndex) {
+                    case 0:
+                      return const ChatsListScreen();
+                    case 1:
+                      return const CallsScreen();
+                    case 2:
+                      return const SettingsScreen();
+                    default:
+                      return const ChatsListScreen();
+                  }
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
